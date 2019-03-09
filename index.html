@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Natália da Silva</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<style>
+
+			body{
+				background-color: #f9f9f9;
+			}
+
+			img.minha-foto{
+				width: 170px;
+				/*margin-left: 85px;*/
+				filter: grayscale(100%);
+			}
+
+			div.container-minha-foto{
+				width: 170px;
+				margin-left: 85px;
+				box-shadow: -3px 3px 0px 1px #dc3545;
+
+			}
+
+			div.header{
+				border-top: solid 10px #dc3545;
+				padding-top: 25px;
+			}
+
+			h1.nome{
+				/*color: #ff4d4d;*/
+				font-weight: bolder;
+			}
+
+			h2.area{
+				color: #4d4d4d;
+			}
+
+			p.descricao{
+				color: #737373;
+			}
+
+			p.info{
+				font-size: 25px;
+				text-align: left;
+				font-weight: bolder;
+				color: #4d4d4d;
+				margin: 0px;
+				border-bottom: solid 1px #dc3545;
+				padding-top: 20px;
+			}
+
+			div.linha1{
+				margin-top: 10px;
+			}
+
+			div.contato{
+				margin-top: 20px;
+			}
+
+			div.habilidades{
+				font-size: 20px;
+			}
+
+			div.habilidades span{
+				padding: 12px;
+				margin: 5px 2px;
+				font-weight: lighter;
+			}
+
+			h3{
+				color: #4d4d4d;
+				font-weight: bolder;
+				font-size: 25px;
+				border-bottom: solid 3px #dc3545;
+				display: inline;
+			}
+
+			div.tec{
+				margin: 8px 0;
+			}
+
+			div.tec span{
+				font-weight: bolder;
+				color: #4d4d4d;
+			}
+
+			span.idade{
+				font-size: 35px!important;
+				color: #dc3545;
+			}
+
+			strong.nacionalidade{
+				color: #dc3545!important;
+			}
+
+			ul.lista{
+				margin-top: 10px;
+			}
+
+			img.image-lista{
+				width: 70px;
+				height: 70px;
+				float: left;
+				/*border: solid 1px #999;*/
+				margin-top: 5px;
+				margin-right: 10px;
+				filter: grayscale(100%);
+			}
+
+			div.framework-item{
+				margin: 20px 0px;
+				font-size: 12px;
+				text-align: center;
+			}
+
+			div.card-extra i.fas{
+				font-size: 30px;
+				color: #555;
+			}
+
+			div.card-extra{
+				margin: 10px 0;
+			}
+
+			div.footer{
+				border-top: solid 10px #dc3545;
+				padding-top: 25px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			
+			<div class="row header">
+				<div class="col-md-8">
+					<h1 class="nome text-danger">Natália da Silva</h1>
+					<h2 class="area"><strong>Desenvolvedora Web</strong> | <i>Front-End & Back-End</i></h2>
+					<p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna arcu, lacinia sit amet convallis in, facilisis ac ipsum. Praesent vestibulum justo lorem, in congue mi tincidunt et. Integer sed nibh tortor.</p>
+				</div>
+
+				<div class="col-md-4">
+					<div class="container-minha-foto rounded-circle"><img src="eu.jpg" class="rounded-circle minha-foto"></div>
+				</div>
+			</div>
+
+			<div class="row linha1">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-6">
+
+							<h3>Formação</h3>
+
+							<ul class="list-group lista">
+								<li class="list-group-item">
+									<img src="univem.jpg" class="rounded-circle image-lista">
+									<i>Cursando</i>
+									<br>
+									<strong>Bacharel em Sistemas de Informação</strong>
+									<br>UNIVEM
+								</li>
+
+								<li class="list-group-item">
+									<img src="etec.jpg" class="rounded-circle image-lista">
+									<i>2014 à 2015</i>
+									<br>
+									<strong>Técnico em Informática</strong>
+									<br>
+									ETEC Antônio Devisate
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-6">
+
+							<h3>Profissional</h3>
+
+							<ul class="list-group lista">
+								<li class="list-group-item">
+									<img src="codesis.png" class="rounded-circle image-lista">
+									<i>Fev/2017 até Atualmente</i>
+									<br>
+									<strong>Codesis Sistemas</strong>
+									<br>
+									Desenvolvedora Web
+								</li>
+
+								<li class="list-group-item">
+									<img src="guri.jpg" class="rounded-circle image-lista">
+								<i>Jun/2016 à Mar/2017</i>
+								<br>
+								<strong>AAPG - Projeto Guri</strong>
+								<br>
+								Aprendiz</li>
+
+								<li class="list-group-item">
+									<img src="acessa_escola2.jpg" class="rounded-circle image-lista">
+									<i>Mai/2014 à Dez/2015</i>
+									<br>
+									<strong>FUNDAP/Acessa Escola</strong>
+									<br>
+									Estagiária
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<p class="info"><span class="idade">21</span> anos | <strong class="nacionalidade">Brasileira</strong></p>
+					<p class="info">Marília - SP</p>
+
+					<div class="card bg-danger text-white contato">
+						<div class="card-body">
+							<p><strong>Contato</strong></p>
+							<p><i class="fas fa-phone"></i> (14) 99168-8662</p>
+							<p><i class="fas fa-envelope"></i> nataliasilva@univem.edu.br</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row linha2">
+				<div class="col-md-8">
+					<h3>O que eu faço</h3>
+
+					<div class="habilidades">
+						<span class="badge badge badge-danger">Aplicativos híbridos</span>
+						<span class="badge badge badge-danger">Websites em Wordpress</span>
+						<span class="badge badge badge-danger">Sistemas de Cadastro</span>
+						<span class="badge badge badge-danger">Integrações com Amazon Web Services</span>
+						<span class="badge badge badge-danger">Implementação de Layouts</span>
+						<span class="badge badge badge-danger">Configuração de plugins Wordpress</span>
+						<span class="badge badge badge-danger">Manutenção em sistemas web</span>
+						<span class="badge badge badge-danger">Sites responsivos</span>
+						<span class="badge badge badge-danger">Integração com gateways de pagamento</span>
+						<span class="badge badge badge-danger">Notificações push</span>
+						<span class="badge badge badge-danger">Sistemas com geolocalização</span>
+						<span class="badge badge badge-danger">Aplicações em real-time</span>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Tecnologias</h3>
+
+					<div class="tec">
+						<span>PHP</span>
+						<div class="progress" style="height:20px;">
+							<div class="progress-bar bg-danger" style="width: 100%;"></div>
+						</div>
+					</div>
+
+					<div class="tec">
+						<span>Javascript</span>
+						<div class="progress" style="height:20px;">
+							<div class="progress-bar bg-danger" style="width: 80%;"></div>
+						</div>
+					</div>
+
+					<div class="tec">
+						<span>HTML</span>
+						<div class="progress" style="height:20px;">
+							<div class="progress-bar bg-danger" style="width: 100%;"></div>
+						</div>
+					</div>
+
+					<div class="tec">
+						<span>CSS</span>
+						<div class="progress" style="height:20px;">
+							<div class="progress-bar bg-danger" style="width: 90%;"></div>
+						</div>
+					</div>
+
+					<div class="tec">
+						<span>MySQL</span>
+						<div class="progress" style="height:20px;">
+							<div class="progress-bar bg-danger" style="width: 65%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row linha3">
+				<div class="col-md-8">
+					<h3>Frameworks</h3>
+					<div class="row">
+						<div class="col-md-1 col-3 framework-item">
+							<img src="zend.png" style="width: 50px;">
+							<span style="display: block;">Zend2</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="vue.png" style="width: 50px;">
+							<span style="display: block;">Vue.js</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="angular.png" style="width: 50px;">
+							<span style="display: block;">Angular</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="bootstrap.png" style="width: 50px; margin-top: 8px;">
+							<span style="display: block;">Bootstrap</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="ionic.png" style="width: 50px;">
+							<span style="display: block;">Ionic</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="cordova.png" style="width: 50px;">
+							<span style="display: block;">Cordova</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="wordpress.png" style="width: 50px;">
+							<span style="display: block;">Wordpress</span>
+						</div>
+						<div class="col-md-1 col-3 framework-item">
+							<img src="jquery.png" style="width: 50px;">
+							<span style="display: block;">JQuery</span>
+						</div>
+					</div>
+
+					<!-- <div class="row">
+						<div class="card bg-danger text-white">
+							<div class="card-body">
+								<p>Me interesso por todo tipo de tecnologia, não tenho problemas em aprender novas frameworks e estou tentando
+								me manter sempre atualizada em relação as últimas tendências
+								de desenvolviemento.</p>
+							</div>
+						</div>
+					</div> -->
+				</div>
+
+
+				<div class="col-md-4">
+					<h3>Prêmios</h3>
+
+					<div class="card card-extra">
+						<div class="card-body">
+							<i class="fas fa-medal"></i>
+							<strong>3º Lugar</strong>
+							<br>
+							<span style="color: #dc3545; ">Maratona de Programação SBC</span>
+							<br>
+							<i>Sede Marília-sp | Fase Regional</i>
+							<br>
+							<strong>2018</strong>
+						</div>
+					</div>
+
+					<div class="card card-extra">
+						<div class="card-body">
+							<i class="fas fa-medal"></i>
+							<strong>4º Lugar</strong>
+							<br>
+							<span style="color: #dc3545; ">2ª Olimpíada de Informática</span>
+							<br>
+							<i>UNIVEM | Categoria Ensino Técnico</i>
+							<br>
+							<strong>2014</strong>
+						</div>
+					</div>
+
+				</div>
+		
+			</div>
+
+
+			<div class="row footer">
+				<div class="col-md-4">
+					<h3>Sobre o site</h3>
+					<p>Este é um site de apresentação pessoal, 
+					desenvolvido por mim, utilizando as as tecnologias 
+					Bootstrap e Vue.Js</p>
+				</div>	
+
+				<div class="col-md-4">
+					<h3>Contato</h3>
+					<p><i class="fas fa-phone"></i> (14) 99168-8662</p>
+					<p><i class="fas fa-envelope"></i> nataliasilva@univem.edu.br</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Redes Sociais: </h3>
+				</div>
+			</div>
+
+			<div class="row footer-final bg-danger text-white">
+				<p style="text-align: center; width: 100%; margin-top: 20px;">Criado por: Natália da Silva</p>
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
