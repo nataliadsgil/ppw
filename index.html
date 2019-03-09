@@ -9,143 +9,77 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<style>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-			body{
-				background-color: #f9f9f9;
-			}
+		<script>
 
-			img.minha-foto{
-				width: 170px;
-				/*margin-left: 85px;*/
-				filter: grayscale(100%);
-			}
+			window.addEventListener("load", function(event){
+				var app = new Vue({
+					el: '#app',
+					data: {
+						name: "Natália da Silva",
+						education: [
+							{image: "univem.jpg", time: "Cursando", course: "Bacharel em Sistemas de Informação", local: "UNIVEM"},
+							{image: "etec.jpg", time: "2014 à 2015", course: "Técnico em Informática", local: "ETEC Antônio Devisate"}
+						],
 
-			div.container-minha-foto{
-				width: 170px;
-				margin-left: 85px;
-				box-shadow: -3px 3px 0px 1px #dc3545;
+						jobs: [
+							{image: "codesis.png", time: "Fev/2017 até Atualmente", company: "Codesis Sistemas", function: "Desenvolvedora Web"},
+							{image: "guri.jpg", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
+							{image: "acessa_escola2.jpg", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
+						],
 
-			}
+						skills: [
+							{skill: "Aplicativos Híbridos"},
+							{skill: "Websites em Wordpress"},
+							{skill: "Sistemas de Cadastro"},
+							{skill: "Integrações com Amazon Web Services"},
+							{skill: "Implementação de Layouts"},
+							{skill: "Configuração de Plugins Wordpress"},
+							{skill: "Manutenção em sistemas web"},
+							{skill: "Sites Responsivos"},
+							{skill: "Integração com gateways de pagamento"},
+							{skill: "Notificações push"},
+							{skill: "Sistemas com geolocalização"},
+							{skill: "Aplicações em real-time"}
+						],
 
-			div.header{
-				border-top: solid 10px #dc3545;
-				padding-top: 25px;
-			}
+						technologies: [
+							{name: "PHP", affinity: 100},
+							{name: "Javascript", affinity: 80},
+							{name: "HTML", affinity: 100},
+							{name: "CSS", affinity: 90},
+							{name: "MySQL", affinity: 65}
+						],
 
-			h1.nome{
-				/*color: #ff4d4d;*/
-				font-weight: bolder;
-			}
+						frameworks: [
+							{image: "zend2.png", name: "Zend2"},
+							{image: "vue.png", name: "Vue.js"},
+							{image: "angular.png", name: "Angular"},
+							{image: "bootstrap.png", name: "Bootstrap"},
+							{image: "ionic.png", name: "Ionic"},
+							{image: "cordova.png", name: "Cordova"},
+							{image: "wordpress.png", name: "Wordpress"},
+							{image: "jquery.png", name: "JQuery"}
+						]
+					}
+				});
+			});
+			
 
-			h2.area{
-				color: #4d4d4d;
-			}
-
-			p.descricao{
-				color: #737373;
-			}
-
-			p.info{
-				font-size: 25px;
-				text-align: left;
-				font-weight: bolder;
-				color: #4d4d4d;
-				margin: 0px;
-				border-bottom: solid 1px #dc3545;
-				padding-top: 20px;
-			}
-
-			div.linha1{
-				margin-top: 10px;
-			}
-
-			div.contato{
-				margin-top: 20px;
-			}
-
-			div.habilidades{
-				font-size: 20px;
-			}
-
-			div.habilidades span{
-				padding: 12px;
-				margin: 5px 2px;
-				font-weight: lighter;
-			}
-
-			h3{
-				color: #4d4d4d;
-				font-weight: bolder;
-				font-size: 25px;
-				border-bottom: solid 3px #dc3545;
-				display: inline;
-			}
-
-			div.tec{
-				margin: 8px 0;
-			}
-
-			div.tec span{
-				font-weight: bolder;
-				color: #4d4d4d;
-			}
-
-			span.idade{
-				font-size: 35px!important;
-				color: #dc3545;
-			}
-
-			strong.nacionalidade{
-				color: #dc3545!important;
-			}
-
-			ul.lista{
-				margin-top: 10px;
-			}
-
-			img.image-lista{
-				width: 70px;
-				height: 70px;
-				float: left;
-				/*border: solid 1px #999;*/
-				margin-top: 5px;
-				margin-right: 10px;
-				filter: grayscale(100%);
-			}
-
-			div.framework-item{
-				margin: 20px 0px;
-				font-size: 12px;
-				text-align: center;
-			}
-
-			div.card-extra i.fas{
-				font-size: 30px;
-				color: #555;
-			}
-
-			div.card-extra{
-				margin: 10px 0;
-			}
-
-			div.footer{
-				border-top: solid 10px #dc3545;
-				padding-top: 25px;
-			}
-		</style>
-
+		</script>
 	</head>
 
 	<body>
 
-		<div class="container">
+		<div class="container" id="app">
 			
 			<div class="row header">
 				<div class="col-md-8">
-					<h1 class="nome text-danger">Natália da Silva</h1>
+					<h1 class="nome text-danger">{{name}}</h1>
 					<h2 class="area"><strong>Desenvolvedora Web</strong> | <i>Front-End & Back-End</i></h2>
-					<p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas urna arcu, lacinia sit amet convallis in, facilisis ac ipsum. Praesent vestibulum justo lorem, in congue mi tincidunt et. Integer sed nibh tortor.</p>
+					<p class="descricao">Olá! Meu nome é Natália, tenho 21 anos e estou no 2º ano do curso de Sistemas de Informação. Sou apaixonada por tecnologia e estou sempre buscando me atualizar nas últimas tendências de desenvolvimento.</p>
 				</div>
 
 				<div class="col-md-4">
@@ -161,21 +95,12 @@
 							<h3>Formação</h3>
 
 							<ul class="list-group lista">
-								<li class="list-group-item">
-									<img src="univem.jpg" class="rounded-circle image-lista">
-									<i>Cursando</i>
+								<li class="list-group-item" v-for="e in education">
+									<img :src="e.image" class="rounded-circle image-lista">
+									<i>{{e.time}}</i>
 									<br>
-									<strong>Bacharel em Sistemas de Informação</strong>
-									<br>UNIVEM
-								</li>
-
-								<li class="list-group-item">
-									<img src="etec.jpg" class="rounded-circle image-lista">
-									<i>2014 à 2015</i>
-									<br>
-									<strong>Técnico em Informática</strong>
-									<br>
-									ETEC Antônio Devisate
+									<strong>{{e.course}}</strong>
+									<br>{{e.local}}
 								</li>
 							</ul>
 						</div>
@@ -185,31 +110,26 @@
 							<h3>Profissional</h3>
 
 							<ul class="list-group lista">
-								<li class="list-group-item">
-									<img src="codesis.png" class="rounded-circle image-lista">
-									<i>Fev/2017 até Atualmente</i>
+								<a href="#" data-toggle="modal" data-target="#modal-job" v-for="j in jobs"><li class="list-group-item">
+									<img :src="j.image" class="rounded-circle image-lista">
+									<i>{{j.time}}</i>
 									<br>
-									<strong>Codesis Sistemas</strong>
+									<strong>{{j.company}}</strong>
 									<br>
-									Desenvolvedora Web
-								</li>
-
-								<li class="list-group-item">
-									<img src="guri.jpg" class="rounded-circle image-lista">
-								<i>Jun/2016 à Mar/2017</i>
-								<br>
-								<strong>AAPG - Projeto Guri</strong>
-								<br>
-								Aprendiz</li>
-
-								<li class="list-group-item">
-									<img src="acessa_escola2.jpg" class="rounded-circle image-lista">
-									<i>Mai/2014 à Dez/2015</i>
+									{{j.function}}
 									<br>
-									<strong>FUNDAP/Acessa Escola</strong>
-									<br>
-									Estagiária
-								</li>
+									<div class="modal fade" id="modal-job">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<div class="modal-title">Atividades</div>
+													
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li></a>
 							</ul>
 						</div>
 					</div>
@@ -235,58 +155,20 @@
 					<h3>O que eu faço</h3>
 
 					<div class="habilidades">
-						<span class="badge badge badge-danger">Aplicativos híbridos</span>
-						<span class="badge badge badge-danger">Websites em Wordpress</span>
-						<span class="badge badge badge-danger">Sistemas de Cadastro</span>
-						<span class="badge badge badge-danger">Integrações com Amazon Web Services</span>
-						<span class="badge badge badge-danger">Implementação de Layouts</span>
-						<span class="badge badge badge-danger">Configuração de plugins Wordpress</span>
-						<span class="badge badge badge-danger">Manutenção em sistemas web</span>
-						<span class="badge badge badge-danger">Sites responsivos</span>
-						<span class="badge badge badge-danger">Integração com gateways de pagamento</span>
-						<span class="badge badge badge-danger">Notificações push</span>
-						<span class="badge badge badge-danger">Sistemas com geolocalização</span>
-						<span class="badge badge badge-danger">Aplicações em real-time</span>
+						<span class="badge badge badge-danger" v-for="skill in skills">{{skill.skill}}</span>
 					</div>
 				</div>
 
 				<div class="col-md-4">
 					<h3>Tecnologias</h3>
 
-					<div class="tec">
-						<span>PHP</span>
+					<div class="tec" v-for="tech in technologies">
+						<span>{{tech.name}}</span>
 						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" style="width: 100%;"></div>
+							<div class="progress-bar bg-danger" :style="'width: ' + tech.affinity + '%;'"></div>
 						</div>
 					</div>
 
-					<div class="tec">
-						<span>Javascript</span>
-						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" style="width: 80%;"></div>
-						</div>
-					</div>
-
-					<div class="tec">
-						<span>HTML</span>
-						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" style="width: 100%;"></div>
-						</div>
-					</div>
-
-					<div class="tec">
-						<span>CSS</span>
-						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" style="width: 90%;"></div>
-						</div>
-					</div>
-
-					<div class="tec">
-						<span>MySQL</span>
-						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" style="width: 65%;"></div>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -295,35 +177,35 @@
 				<div class="col-md-8">
 					<h3>Frameworks</h3>
 					<div class="row">
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="zend.png" style="width: 50px;">
 							<span style="display: block;">Zend2</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="vue.png" style="width: 50px;">
 							<span style="display: block;">Vue.js</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="angular.png" style="width: 50px;">
 							<span style="display: block;">Angular</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="bootstrap.png" style="width: 50px; margin-top: 8px;">
 							<span style="display: block;">Bootstrap</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="ionic.png" style="width: 50px;">
 							<span style="display: block;">Ionic</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="cordova.png" style="width: 50px;">
 							<span style="display: block;">Cordova</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="wordpress.png" style="width: 50px;">
 							<span style="display: block;">Wordpress</span>
 						</div>
-						<div class="col-md-1 col-3 framework-item">
+						<div class="col-md-3 col-3 framework-item">
 							<img src="jquery.png" style="width: 50px;">
 							<span style="display: block;">JQuery</span>
 						</div>

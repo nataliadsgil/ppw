@@ -1,0 +1,144 @@
+@font-face{
+	font-family: Caviar Dreams;
+	src: url(fonts/caviar_dreams/CaviarDreams.ttf);
+}
+
+@font-face{
+	font-family: Roboto Light;
+	src: url(fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face{
+	font-family: Vogue;
+	src: url(fonts/vogue/Vogue.ttf);
+}
+
+body{
+	background-color: #f9f9f9;
+	font-family: Roboto Light;
+}
+
+img.minha-foto{
+	width: 170px;
+	/*margin-left: 85px;*/
+	filter: grayscale(100%);
+}
+
+div.container-minha-foto{
+	width: 170px;
+	margin-left: 85px;
+	box-shadow: -3px 3px 0px 1px #dc3545;
+
+}
+
+div.header{
+	border-top: solid 10px #dc3545;
+	padding-top: 25px;
+}
+
+h1.nome{
+	/*color: #ff4d4d;*/
+	font-weight: bolder;
+}
+
+h2.area{
+	color: #4d4d4d;
+}
+
+p.descricao{
+	color: #737373;
+}
+
+p.info{
+	font-size: 25px;
+	text-align: left;
+	font-weight: bolder;
+	color: #4d4d4d;
+	margin: 0px;
+	border-bottom: solid 1px #dc3545;
+	padding-top: 20px;
+}
+
+div.linha1{
+	margin-top: 10px;
+}
+
+div.contato{
+	margin-top: 20px;
+}
+
+div.habilidades{
+	font-size: 20px;
+}
+
+div.habilidades span{
+	padding: 12px;
+	margin: 5px 2px;
+	font-weight: lighter;
+}
+
+h3{
+	color: #4d4d4d;
+	font-weight: bolder;
+	font-size: 25px;
+	border-bottom: solid 3px #dc3545;
+	display: inline;
+}
+
+div.tec{
+	margin: 8px 0;
+}
+
+div.tec span{
+	font-weight: bolder;
+	color: #4d4d4d;
+}
+
+span.idade{
+	font-size: 35px!important;
+	color: #dc3545;
+}
+
+strong.nacionalidade{
+	color: #dc3545!important;
+}
+
+ul.lista{
+	margin-top: 10px;
+}
+
+img.image-lista{
+	width: 70px;
+	height: 70px;
+	float: left;
+	/*border: solid 1px #999;*/
+	margin-top: 5px;
+	margin-right: 10px;
+	filter: grayscale(100%);
+}
+
+div.framework-item{
+	margin: 20px 0px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bolder;
+}
+
+div.card-extra i.fas{
+	font-size: 30px;
+	color: #555;
+}
+
+div.card-extra{
+	margin: 10px 0;
+}
+
+div.footer{
+	border-top: solid 10px #dc3545;
+	padding-top: 25px;
+}
+
+ul.lista a{
+	color: #4d4d4d;
+	outline: none;
+}
