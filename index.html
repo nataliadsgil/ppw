@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Natália da Silva</title>
+		<title>Natália da Silva | Desenvolvedora Web</title>
+		<meta name="description" content="Meu nome é Natália da Silva, eu sou desenvolvedora web e este é meu site de apresentação pessoal.">
+		<meta name="keywords" content="sites, aplicativos, html, css, javascript, wordpress, tecnologia, web">
+		<meta name="author" content="Natalia da Silva">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -20,14 +23,14 @@
 					data: {
 						name: "Natália da Silva",
 						education: [
-							{image: "univem.jpg", time: "Cursando", course: "Bacharel em Sistemas de Informação", local: "UNIVEM"},
-							{image: "etec.jpg", time: "2014 à 2015", course: "Técnico em Informática", local: "ETEC Antônio Devisate"}
+							{image: "univem.jpg", alt:"Univem logo", time: "Cursando", course: "Bacharel em Sistemas de Informação", local: "UNIVEM"},
+							{image: "etec.jpg", alt:"ETEC logo", time: "2014 à 2015", course: "Técnico em Informática", local: "ETEC Antônio Devisate"}
 						],
 
 						jobs: [
-							{image: "codesis.png", time: "Fev/2017 até Atualmente", company: "Codesis Sistemas", function: "Desenvolvedora Web"},
-							{image: "guri.jpg", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
-							{image: "acessa_escola2.jpg", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
+							{image: "codesis.png", alt:"Codesis logo", time: "Fev/2017 até Atualmente", company: "Codesis Sistemas", function: "Desenvolvedora Web"},
+							{image: "guri.jpg", alt:"Projeto Guri logo", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
+							{image: "acessa_escola2.jpg", alt:"Acessa Escola logo", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
 						],
 
 						skills: [
@@ -83,7 +86,7 @@
 				</div>
 
 				<div class="col-md-4">
-					<div class="container-minha-foto rounded-circle"><img src="eu.jpg" class="rounded-circle minha-foto"></div>
+					<div class="container-minha-foto rounded-circle"><img src="eu.jpg" alt="Minha Foto" class="rounded-circle minha-foto"></div>
 				</div>
 			</div>
 
@@ -96,7 +99,7 @@
 
 							<ul class="list-group lista">
 								<li class="list-group-item" v-for="e in education">
-									<img :src="e.image" class="rounded-circle image-lista">
+									<img :src="e.image" :alt="e.alt" class="rounded-circle image-lista">
 									<i>{{e.time}}</i>
 									<br>
 									<strong>{{e.course}}</strong>
@@ -111,7 +114,7 @@
 
 							<ul class="list-group lista">
 								<a href="#" data-toggle="modal" data-target="#modal-job" v-for="j in jobs"><li class="list-group-item">
-									<img :src="j.image" class="rounded-circle image-lista">
+									<img :src="j.image" :alt="j.alt" class="rounded-circle image-lista">
 									<i>{{j.time}}</i>
 									<br>
 									<strong>{{j.company}}</strong>
@@ -125,6 +128,19 @@
 													<div class="modal-title">Atividades</div>
 													
 													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+
+												<div class="modal-body">
+													<div class="row">
+														<div class="col-md-3">
+															<img :src="j.image" :alt="j.alt" class="rounded-circle" style="width: 100px;">
+														</div>
+
+														<div class="col-md-9">
+															<h4>{{j.company}}</h4>
+														</div>
+														
+													</div>
 												</div>
 											</div>
 										</div>
@@ -178,35 +194,35 @@
 					<h3>Frameworks</h3>
 					<div class="row">
 						<div class="col-md-3 col-3 framework-item">
-							<img src="zend.png" style="width: 50px;">
+							<img src="zend.png" alt="Zend Logo" style="width: 50px;">
 							<span style="display: block;">Zend2</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="vue.png" style="width: 50px;">
+							<img src="vue.png" alt="Vue logo" style="width: 50px;">
 							<span style="display: block;">Vue.js</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="angular.png" style="width: 50px;">
+							<img src="angular.png" alt="Angular logo" style="width: 50px;">
 							<span style="display: block;">Angular</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="bootstrap.png" style="width: 50px; margin-top: 8px;">
+							<img src="bootstrap.png" alt="Bootstrap logo" style="width: 50px; margin-top: 8px;">
 							<span style="display: block;">Bootstrap</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="ionic.png" style="width: 50px;">
+							<img src="ionic.png" alt="Ionic logo" style="width: 50px;">
 							<span style="display: block;">Ionic</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="cordova.png" style="width: 50px;">
+							<img src="cordova.png" alt="Cordova logo" style="width: 50px;">
 							<span style="display: block;">Cordova</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="wordpress.png" style="width: 50px;">
+							<img src="wordpress.png" alt="Wordpress logo" style="width: 50px;">
 							<span style="display: block;">Wordpress</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="jquery.png" style="width: 50px;">
+							<img src="jquery.png" alt="JQuery logo" style="width: 50px;">
 							<span style="display: block;">JQuery</span>
 						</div>
 					</div>
