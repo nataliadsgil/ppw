@@ -102,14 +102,30 @@
 		margin-top: 20px;
 		padding-top: 20px;
 	}
+
+	div.my-header i{
+		font-size: 60px;
+		width: 100px;
+		height: 100px;
+		background-color: #444;
+		position: relative;
+		left: 50%;
+		margin-left: -50px;
+		text-align: center;
+		line-height: 100px;
+		margin-top: 10px;
+		color: #eee;
+		border-radius: 50%;
+	}
 </style>
 
 <body>
 
 <div class="container">
 
-	<div class="row">
+	<div class="row my-header">
 		<div class="col-md-12">
+			<i class="fas fa-camera-retro"></i>
 			<h1 class="titulo">Minha Galeria</h1>
 			<h2 class="subtitulo">Galeria responsiva em Bootstrap</h2>
 		</div>
@@ -153,8 +169,8 @@
 		<div class="col-md-6 my-descricao">
 			<h3>Sobre</h3>
 
-			<p>Este é um projeto de galeria construído
-			utilizando a framework Boostrap 4, foram
+			<p>Este é um projeto de galeria desenvolvido por mim para apresentar o conceito de grid da
+				framework Bootstrap. Foram
 			utilizadas tecnologias HTML e CSS, além
 			de ícones free da bliblioteca de ícones
 			FontAwesome e fontes tipográficas baixadas
