@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site Música</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<style>
+
+		body{
+			background-color: #232323;
+			color: #eee;
+		}
+
+		div.carousel-item{
+			height: 400px;
+			overflow: hidden;
+		}
+
+		div.carousel-item img{
+			filter: grayscale(100%);
+		}
+
+		h1{
+			text-align: center;
+			width: 100%;
+			font-weight: bolder;
+		}
+
+		i{
+			text-align: center;
+			width: 100px;
+			height: 100px;
+			font-size: 80px;
+			position: relative;
+			left: 50%;
+			margin-left: -50px;
+			margin-top: 30px;
+		}
+
+		div.header{
+			margin-bottom: 20px;
+		}
+
+		div.my-carousel{
+			border: double 5px #eee;
+			overflow: hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row header">
+
+			<div class="col-md-12">
+				<i class="fas fa-headphones"></i>
+			</div>
+
+			<div class="col-md-12">
+				<h1>Bootstrap Carousel</h1>
+			</div>
+		</div>
+
+		<div class="row carousel my-carousel">
+			
+			<div id="banner" class="carousel slide" data-ride="carousel">
+				
+				<ul class="carousel-indicators">
+					<li data-target="#banner" data-slide-to="0" class="active"></li>
+					<li data-target="#banner" data-slide-to="1"></li>
+					<li data-target="#banner" data-slide-to="2"></li>
+				</ul>
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="show1.jpg" style="width: 85vw;">
+						<div class="carousel-caption">
+							<h1>Este é o primeiro banner</h1>
+							<p>Deve ter algo escrito aqui para 
+							preencher espaço.</p>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<img src="show2.jpg" style="width: 85vw;">
+						<div class="carousel-caption">
+							<h1>Este é o segundo banner</h1>
+							<p>Deve ter algo escrito aqui para 
+							preencher espaço.</p>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<img src="show3.jpg" style="width: 85vw;">
+						<div class="carousel-caption">
+							<h1>Este é o terceiro banner</h1>
+							<p>Deve ter algo escrito aqui para 
+							preencher espaço.</p>
+						</div>
+					</div>
+				</div>
+
+
+				<a class="carousel-control-prev" href="#banner" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+
+
+				<a class="carousel-control-next" href="#banner" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+
+			</div>
+
+		</div>
+
+		<div class="row content">
+			<div class="col-md-12">
+				<h3>Programação</h3>
+			</div>
+
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-3">Músicas</div>
+					<div class="col-md-3">Teatro</div>
+					<div class="col-md-3">Cinema</div>
+					<div class="col-md-3">Dança</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row footer"></div>
+	</div>
+</body>
+</html>
