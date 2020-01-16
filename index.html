@@ -28,7 +28,8 @@
 						],
 
 						jobs: [
-							{image: "codesis.png", alt:"Codesis logo", time: "Fev/2017 até Atualmente", company: "Codesis Sistemas", function: "Desenvolvedora Web"},
+							{image: "m2corp.png", alt:"M2Corp logo", time: "Abr/2019 até Atualmente", company: "M2Corp Software", function: "Programadora"},
+							{image: "codesis.png", alt:"Codesis logo", time: "Fev/2017 até Mar/2019", company: "Codesis Sistemas", function: "Programadora"},
 							{image: "guri.jpg", alt:"Projeto Guri logo", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
 							{image: "acessa_escola2.jpg", alt:"Acessa Escola logo", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
 						],
@@ -59,7 +60,7 @@
 						frameworks: [
 							{image: "zend2.png", name: "Zend2"},
 							{image: "vue.png", name: "Vue.js"},
-							{image: "angular.png", name: "Angular"},
+							{image: "reactjs.png", name: "React.js"},
 							{image: "bootstrap.png", name: "Bootstrap"},
 							{image: "ionic.png", name: "Ionic"},
 							{image: "cordova.png", name: "Cordova"},
@@ -82,7 +83,7 @@
 				<div class="col-md-8">
 					<h1 class="nome text-danger">{{name}}</h1>
 					<h2 class="area"><strong>Desenvolvedora Web</strong> | <i>Front-End & Back-End</i></h2>
-					<p class="descricao">Olá! Meu nome é Natália, tenho 21 anos e estou no 2º ano do curso de Sistemas de Informação. Sou apaixonada por tecnologia e estou sempre buscando me atualizar nas últimas tendências de desenvolvimento.</p>
+					<p class="descricao">Tenho experiência com vários dos frameworks mais populares do mercado e estou constantemente me atualizando sobre as últimas tendências do desenvolvimento web.</p>
 				</div>
 
 				<div class="col-md-4">
@@ -113,7 +114,7 @@
 							<h3>Profissional</h3>
 
 							<ul class="list-group lista">
-								<a href="#" data-toggle="modal" data-target="#modal-job" v-for="j in jobs"><li class="list-group-item">
+								<a v-for="j in jobs"><li class="list-group-item">
 									<img :src="j.image" :alt="j.alt" class="rounded-circle image-lista">
 									<i>{{j.time}}</i>
 									<br>
@@ -152,7 +153,15 @@
 				</div>
 
 				<div class="col-md-4">
-					<p class="info"><span class="idade">21</span> anos | <strong class="nacionalidade">Brasileira</strong></p>
+
+					<div class="card bg-white contato">
+						<div class="card-body row">
+							<a class="btn social-buttons col-md-6" href="https://github.com/rootdevna" target="_blank"><i class="fab fa-github"></i>Github</a>
+							<a class="btn social-buttons col-md-6" href="https://www.linkedin.com/in/natalia-silva-dev/" target="_blank"><i class="fab fa-linkedin-in"></i>Linkedin</a>
+						</div>
+					</div>
+
+					<p class="info"><span class="idade">22</span> anos | <strong class="nacionalidade">Brasileira</strong></p>
 					<p class="info">Marília - SP</p>
 
 					<div class="card bg-danger text-white contato">
@@ -202,8 +211,8 @@
 							<span style="display: block;">Vue.js</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
-							<img src="angular.png" alt="Angular logo" style="width: 50px;">
-							<span style="display: block;">Angular</span>
+							<img src="reactjs.png" alt="React logo" style="width: 70px;">
+							<span style="display: block;">React.js</span>
 						</div>
 						<div class="col-md-3 col-3 framework-item">
 							<img src="bootstrap.png" alt="Bootstrap logo" style="width: 50px; margin-top: 8px;">
