@@ -12,7 +12,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style-new.css">
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 		<script>
@@ -21,32 +21,17 @@
 				var app = new Vue({
 					el: '#app',
 					data: {
-						name: "Natália da Silva",
+						name: "Natalia Silva",
 						education: [
-							{image: "univem.jpg", alt:"Univem logo", time: "Cursando", course: "Bacharel em Sistemas de Informação", local: "UNIVEM"},
-							{image: "etec.jpg", alt:"ETEC logo", time: "2014 à 2015", course: "Técnico em Informática", local: "ETEC Antônio Devisate"}
+							{image: "univem.png", alt:"Univem logo", time: "Cursando", course: "Bacharel em Sistemas de Informação", local: "UNIVEM"},
+							{image: "etec.png", alt:"ETEC logo", time: "2014 à 2015", course: "Técnico em Informática", local: "ETEC Antônio Devisate"}
 						],
 
 						jobs: [
 							{image: "m2corp.png", alt:"M2Corp logo", time: "Abr/2019 até Atualmente", company: "M2Corp Software", function: "Programadora"},
 							{image: "codesis.png", alt:"Codesis logo", time: "Fev/2017 até Mar/2019", company: "Codesis Sistemas", function: "Programadora"},
-							{image: "guri.jpg", alt:"Projeto Guri logo", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
-							{image: "acessa_escola2.jpg", alt:"Acessa Escola logo", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
-						],
-
-						skills: [
-							{skill: "Aplicativos Híbridos"},
-							{skill: "Websites em Wordpress"},
-							{skill: "Sistemas de Cadastro"},
-							{skill: "Integrações com Amazon Web Services"},
-							{skill: "Implementação de Layouts"},
-							{skill: "Configuração de Plugins Wordpress"},
-							{skill: "Manutenção em sistemas web"},
-							{skill: "Sites Responsivos"},
-							{skill: "Integração com gateways de pagamento"},
-							{skill: "Notificações push"},
-							{skill: "Sistemas com geolocalização"},
-							{skill: "Aplicações em real-time"}
+							{image: "guri.png", alt:"Projeto Guri logo", time: "Jun/2016 à Mar/2017", company: "AAPG - Projeto Guri", function: "Aprendiz"},
+							{image: "acessa_escola2.png", alt:"Acessa Escola logo", time: "Mai/2014 à Dez/2015", company: "Fundap/Acessa Escola", function: "Estagiária"}
 						],
 
 						technologies: [
@@ -58,15 +43,25 @@
 						],
 
 						frameworks: [
-							{image: "zend2.png", name: "Zend2"},
-							{image: "vue.png", name: "Vue.js"},
-							{image: "reactjs.png", name: "React.js"},
-							{image: "bootstrap.png", name: "Bootstrap"},
-							{image: "ionic.png", name: "Ionic"},
-							{image: "cordova.png", name: "Cordova"},
-							{image: "wordpress.png", name: "Wordpress"},
-							{image: "jquery.png", name: "JQuery"}
-						]
+							{name: "Zend2", image: "img/frameworks/zend.png"},
+							{name: "Vue.js", image: "img/frameworks/vue.png"},
+							{name: "React.js", image: "img/frameworks/reactjs.png"},
+							{name: "Bootstrap", image: "img/frameworks/bootstrap.png"},
+							{name: "Ionic", image: "img/frameworks/ionic.png"},
+							{name: "Wordpress", image: "img/frameworks/wordpress.png"},
+							{name: "JQuery", image: "img/frameworks/jquery.png"}
+						],
+						newColor: "#ED6262",
+						newColorDark: "#883030"
+					},
+					created: function() {
+						
+					},
+					methods: {
+						changeColor: function(e) {
+							this.newColor = e.target.value;
+							console.log(this.newColor)
+						}
 					}
 				});
 			});
@@ -76,233 +71,166 @@
 	</head>
 
 	<body>
-
-		<div class="container" id="app">
 			
+		<div class="container" id="app">
+
+			<div class="top-bar">
+				<span>Cor do tema: <strong>{{newColor}}</strong></span>
+				<input type="color" v-on:input="changeColor" :value="newColor">	
+			</div>
+
 			<div class="row header">
-				<div class="col-md-8">
-					<h1 class="nome text-danger">{{name}}</h1>
-					<h2 class="area"><strong>Desenvolvedora Web</strong> | <i>Front-End & Back-End</i></h2>
-					<p class="descricao">Tenho experiência com vários dos frameworks mais populares do mercado e estou constantemente me atualizando sobre as últimas tendências do desenvolvimento web.</p>
-				</div>
+				<div class="col-md-7">
+					<div class="presentation">
+						<h1 :style="'color: ' + newColor">{{name}}</h1>
+						<h2>Desenvolvedora Web Full-Stack, <br/> apaixonada por UI/UX</h2>
+						<p>Constantemente me atualizando sobre as últimas tendências, estou atualmente procurando me especializar em desenvolvimento de interface e experiência de usuário.</p>
 
-				<div class="col-md-4">
-					<div class="container-minha-foto rounded-circle"><img src="eu.jpg" alt="Minha Foto" class="rounded-circle minha-foto"></div>
-				</div>
-			</div>
+						<div class="menu-principal" :style="'background-color:' + newColor">
 
-			<div class="row linha1">
-				<div class="col-md-8">
-					<div class="row">
-						<div class="col-md-6">
-
-							<h3>Formação</h3>
-
-							<ul class="list-group lista">
-								<li class="list-group-item" v-for="e in education">
-									<img :src="e.image" :alt="e.alt" class="rounded-circle image-lista">
-									<i>{{e.time}}</i>
-									<br>
-									<strong>{{e.course}}</strong>
-									<br>{{e.local}}
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-md-6">
-
-							<h3>Profissional</h3>
-
-							<ul class="list-group lista">
-								<a v-for="j in jobs"><li class="list-group-item">
-									<img :src="j.image" :alt="j.alt" class="rounded-circle image-lista">
-									<i>{{j.time}}</i>
-									<br>
-									<strong>{{j.company}}</strong>
-									<br>
-									{{j.function}}
-									<br>
-									<div class="modal fade" id="modal-job">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<div class="modal-title">Atividades</div>
-													
-													<button type="button" class="close" data-dismiss="modal">&times;</button>
-												</div>
-
-												<div class="modal-body">
-													<div class="row">
-														<div class="col-md-3">
-															<img :src="j.image" :alt="j.alt" class="rounded-circle" style="width: 100px;">
-														</div>
-
-														<div class="col-md-9">
-															<h4>{{j.company}}</h4>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li></a>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-
-					<div class="card bg-white contato">
-						<div class="card-body row">
-							<a class="btn social-buttons col-md-6" href="https://github.com/rootdevna" target="_blank"><i class="fab fa-github"></i>Github</a>
-							<a class="btn social-buttons col-md-6" href="https://www.linkedin.com/in/natalia-silva-dev/" target="_blank"><i class="fab fa-linkedin-in"></i>Linkedin</a>
 						</div>
 					</div>
 
-					<p class="info"><span class="idade">22</span> anos | <strong class="nacionalidade">Brasileira</strong></p>
-					<p class="info">Marília - SP</p>
+					<div class="col-md-12 content-job">
+						<h3 :style="'border-color:' + newColor">Profissional</h3>
 
-					<div class="card bg-danger text-white contato">
-						<div class="card-body">
-							<p><strong>Contato</strong></p>
-							<p><i class="fas fa-phone"></i> (14) 99168-8662</p>
-							<p><i class="fas fa-envelope"></i> nataliasilva@univem.edu.br</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="row linha2">
-				<div class="col-md-8">
-					<h3>O que eu faço</h3>
-
-					<div class="habilidades">
-						<span class="badge badge badge-danger" v-for="skill in skills">{{skill.skill}}</span>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<h3>Tecnologias</h3>
-
-					<div class="tec" v-for="tech in technologies">
-						<span>{{tech.name}}</span>
-						<div class="progress" style="height:20px;">
-							<div class="progress-bar bg-danger" :style="'width: ' + tech.affinity + '%;'"></div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-
-			<div class="row linha3">
-				<div class="col-md-8">
-					<h3>Frameworks</h3>
-					<div class="row">
-						<div class="col-md-3 col-3 framework-item">
-							<img src="zend.png" alt="Zend Logo" style="width: 50px;">
-							<span style="display: block;">Zend2</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="vue.png" alt="Vue logo" style="width: 50px;">
-							<span style="display: block;">Vue.js</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="reactjs.png" alt="React logo" style="width: 70px;">
-							<span style="display: block;">React.js</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="bootstrap.png" alt="Bootstrap logo" style="width: 50px; margin-top: 8px;">
-							<span style="display: block;">Bootstrap</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="ionic.png" alt="Ionic logo" style="width: 50px;">
-							<span style="display: block;">Ionic</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="cordova.png" alt="Cordova logo" style="width: 50px;">
-							<span style="display: block;">Cordova</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="wordpress.png" alt="Wordpress logo" style="width: 50px;">
-							<span style="display: block;">Wordpress</span>
-						</div>
-						<div class="col-md-3 col-3 framework-item">
-							<img src="jquery.png" alt="JQuery logo" style="width: 50px;">
-							<span style="display: block;">JQuery</span>
-						</div>
-					</div>
-
-					<!-- <div class="row">
-						<div class="card bg-danger text-white">
-							<div class="card-body">
-								<p>Me interesso por todo tipo de tecnologia, não tenho problemas em aprender novas frameworks e estou tentando
-								me manter sempre atualizada em relação as últimas tendências
-								de desenvolviemento.</p>
+						<div class="out-div" v-for="j in jobs">
+							<div class="in-div">
+								<img :src="j.image">
+								<div class="text">
+									<span class="date">{{j.time}}</span>
+									<strong class="company">{{j.company}}</strong>
+									<span class="role">{{j.function}}</span>
+								</div>
 							</div>
 						</div>
-					</div> -->
-				</div>
+					</div>
 
+					<div class="col-md-12 content-edu">
+						<h3 :style="'border-color:' + newColor">Formação</h3>
 
-				<div class="col-md-4">
-					<h3>Prêmios</h3>
-
-					<div class="card card-extra">
-						<div class="card-body">
-							<i class="fas fa-medal"></i>
-							<strong>3º Lugar</strong>
-							<br>
-							<span style="color: #dc3545; ">Maratona de Programação SBC</span>
-							<br>
-							<i>Sede Marília-sp | Fase Regional</i>
-							<br>
-							<strong>2018</strong>
+						<div class="out-div" v-for="e in education">
+							<div class="in-div">
+								<img :src="e.image">
+								<div class="text">
+									<span class="date">{{e.time}}</span>
+									<strong class="company">{{e.course}}</strong>
+									<span class="role">{{e.local}}</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="card card-extra">
-						<div class="card-body">
-							<i class="fas fa-medal"></i>
-							<strong>4º Lugar</strong>
-							<br>
-							<span style="color: #dc3545; ">2ª Olimpíada de Informática</span>
-							<br>
-							<i>UNIVEM | Categoria Ensino Técnico</i>
-							<br>
-							<strong>2014</strong>
+
+					<div class="col-md-12 content-frameworks">
+						<h3 :style="'border-color:' + newColor">Frameworks</h3>
+
+						<div class="all-frameworks">
+							<div class="container-framework-item" v-for="f in frameworks">
+								<div class="framework-item">
+									<img :src="f.image" :alt="f.name">
+								</div>
+								<span>{{f.name}}</span>
+							</div>
 						</div>
+						
 					</div>
 
 				</div>
-		
+
+				<div class="col-md-5">
+					<div class="sidebar">
+						<svg width="453" height="144" viewBox="0 0 453 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 10C0 4.47716 4.47715 0 10 0H443C448.523 0 453 4.47715 453 10V122C233 205 217.5 16.5 0 122V10Z" :fill="newColor"/>
+						</svg>
+
+
+						<div class="container-photo">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="photo">
+										<img src="eu.jpg">
+									</div>
+								</div>	
+							</div>
+						</div>
+
+						<div class="row social-area">
+								<a 
+								class="button-social-media"
+								:style="'background-color: ' + newColor"
+								href="https://linkedin.com/in/natalia-silva-dev/"
+								target="_blank">
+									<img src='github-icon.svg'>
+								</a>
+
+								<a 
+								class="button-social-media"
+								:style="'background-color: ' + newColor" 
+								href="https://github.com/rootdevna" 
+								target="_blank">
+									<img src='linkedin-icon.svg'>
+								</a>
+						</div>
+
+
+						<div class="row contato" :style="'background-color:' + newColor">
+							
+							<div class="item-contato" :style="'background-color:' + newColor">
+								<img src="phone-icon.svg">
+								(14) 99168-8662</div>
+
+							<div class="item-contato" :style="'background-color:' + newColor">
+								<img src="mail-icon.svg">
+								nataliadasilva.dev@gmail.com</div>
+
+						</div>
+
+						<div class="row tec" style="display: flex; flex-direction: column; width: 80%; margin: 0 10%;">
+							
+							<h3 :style="'border-color:' + newColor">Tecnologias</h3>
+
+							<div class="tec" v-for="tech in technologies">
+								<span>{{tech.name}}</span>
+								<div class="progress">
+									<div class="progress-bar" :style="'width: ' + tech.affinity + '%; background-color: ' + newColor"></div>
+								</div>
+							</div>
+
+						</div>
+
+
+						<div class="row all-premios">
+
+							<h3>Prêmios</h3>
+
+							<div class="premios">
+								<img src="premium.svg">
+								<div class="text">
+									<strong>3º Lugar 2018</strong>
+									<span class="color-text" :style="'color:' + newColor">Maratona de Programação SBC</span>
+									<span>Sede Marília-SP | Fase Regional</span>
+								</div>
+							</div>
+
+							<div class="premios">
+								<img src="premium.svg">
+								<div class="text">
+									<strong>4º Lugar 2014</strong>
+									<span class="color-text" :style="'color:' + newColor">2ª Olímpiada de Informática</span>
+									<span>UNIVEM | Categoria Ensino Técnico</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</div>
-
 
 			<div class="row footer">
-				<div class="col-md-4">
-					<h3>Sobre o site</h3>
-					<p>Este é um site de apresentação pessoal, 
-					desenvolvido por mim, utilizando as as tecnologias 
-					Bootstrap e Vue.Js</p>
-				</div>	
-
-				<div class="col-md-4">
-					<h3>Contato</h3>
-					<p><i class="fas fa-phone"></i> (14) 99168-8662</p>
-					<p><i class="fas fa-envelope"></i> nataliasilva@univem.edu.br</p>
+				<div class="col-md-12 content-footer" :style="'background-color: ' + newColor">
+					Desenvolvido por: Natália Silva
 				</div>
-
-				<div class="col-md-4">
-					<h3>Redes Sociais: </h3>
-				</div>
-			</div>
-
-			<div class="row footer-final bg-danger text-white">
-				<p style="text-align: center; width: 100%; margin-top: 20px;">Criado por: Natália da Silva</p>
 			</div>
 
 		</div>
